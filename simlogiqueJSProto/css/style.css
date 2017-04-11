@@ -1,0 +1,136 @@
+.mcueditor {
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+body {
+	margin: 0;
+}
+
+
+
+
+.mcueditor>.toolbar {
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: 20px;
+	left: 20px;
+}
+.mcueditor>.toolbar>li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 5px 0 0;
+	float: left;
+}
+.mcueditor>.toolbar>li.logo {
+	margin: 0 30px 0 0;
+}
+.mcueditor>.toolbar>li>a {
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+.mcueditor>.toolbar>li.selected {
+	border-radius: 5px 15px;
+	border: 1px solid rgb(0, 128, 255);
+	background: rgba(0, 128, 255, 0.5);
+	margin: -1px 4px -1px -1px;
+}
+
+
+.menu {
+	padding: 0;
+	margin: -1px;
+	min-width: 100px;
+}
+.menu>li {
+	list-style: none;
+}
+.menu>li:hover {
+	background: #EEE;
+}
+.menu>li>a {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	padding: 3px;
+	text-decoration: none;
+	color: #000;
+}
+
+.dropdown-content {
+	box-sizing: border-box;
+	display: none;
+	position: absolute;
+	box-shadow: 0 3px 10px -3px #444;
+	border: 1px solid #DDD;
+	background: #FFF;
+}
+.dropdown:hover>.dropdown-content {
+	display: inline-block;
+}
+/*
+.mcueditor>.toolbar {
+	list-style: none;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	top: 20px;
+	left: 20px;
+}
+.mcueditor>.toolbar>li {
+	float: left;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+.mcueditor>.toolbar>li>a {
+	display: block;
+	width: 30px;
+	height: 30px;
+}
+.mcueditor>.toolbar>.logo {
+	margin: 0 20px 0 0;
+	float: left;
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+.mcueditor .menu {
+	display: none;
+	list-style: none;
+	border: 1px solid #DDD;
+	position: absolute;
+	background: #FFF;
+	padding: 0;
+	box-shadow: 0 3px 10px -3px #444;
+	width: 100px;
+}
+.mcueditor li:hover>.menu {
+	display: block;
+}
+.mcueditor .menu>li>a {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 100%;
+	padding: 3px;
+	text-decoration: none;
+	color: #000;
+}
+.mcueditor .menu>li>.sub {
+	display: none;
+	margin: -1px 0 0 0;
+}
+.mcueditor .menu>li:hover>.sub {
+	display: inline-block;
+}
+.mcueditor .menu>li {
+	float: none;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.mcueditor .menu li:hover {
+	background: #EEE;
+}*/

@@ -1,0 +1,53 @@
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>SimLogique</title>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	
+	<script src="js/script.js"></script>
+	<script src="js/Timer.js"></script>
+	<script src="js/Interface.js"></script>
+	<script src="js/Editor.js"></script>
+	<script src="js/Selection.js"></script>
+	<script src="js/Tool.js"></script>
+	<script src="js/Xml.js"></script>
+	
+	<script src="js/tools/ToolCursor.js"></script>
+	<script src="js/tools/ToolWire.js"></script>
+	<script src="js/tools/ToolComponent.js"></script>
+	
+	<script src="js/core/Object.js"></script>
+	<script src="js/core/Connector.js"></script>
+	<script src="js/core/Component.js"></script>
+	<script src="js/core/Connection.js"></script>
+	<script src="js/core/Pin.js"></script>
+	<script src="js/core/Circuit.js"></script>
+	<script src="js/core/Schematic.js"></script>
+	<script src="js/core/Wire.js"></script>
+	<script src="js/core/WireJoint.js"></script>
+	
+	<script src="js/core/components/AndGate.js"></script>
+	<script src="js/core/components/NotGate.js"></script>
+	<!--<script src="js/core/components/Macro.js"></script>-->
+</head>
+<body onload="load();" oncontextmenu="return false;">
+	<div class="mcueditor" id="editor">
+		<ul class="toolbar">
+			<li class="logo dropdown"><a href="javascript:void(0);" style="background: url(img/menu.png);"></a><ul class="menu dropdown-content">
+				<li class="dropdown" data-slUI="savemenu"><a href="javascript:void(0);">Save<span style="float: right;">></span></a></li>
+				<li><a href="javascript:void(0);" data-slUI="load">Load</a></li>
+				<li class="dropdown" data-slUI="simulationmenu"><a href="javascript:void(0);">Simulation<span style="float: right;">></span></a></li>
+				<li class="dropdown" data-slUI="setupmenu"><a href="javascript:void(0);">Setup<span style="float: right;">></span></a></li>
+				</ul></li>
+				
+			<!--<li><a href="javascript:void(0);" style="background: url(img/duplicate.png);"></a><ul class="menu dropdown-content">
+				<li><a href="javascript:void(0);">Duplicate</a></li>
+				<li><a href="javascript:void(0);">Export</a></li>
+				<li><a href="javascript:void(0);">Import</a></li></ul></li>-->
+		</ul>
+		<canvas width="800" height="800"></canvas>
+	</div>
+</body>
+</html>
