@@ -8,10 +8,13 @@ AndGate::AndGate(Schematic* parent, int _x, int _y, Orientation orientation) : C
     _B(createPin(x()-1, y()+3, Orientation::left, "B")),
     _S(createPin(x()+5, y()+2, Orientation::right, "S"))
 {
+    if(orientation != Orientation::up)
+        while(rotate() != Orientation::up);
 }
 
 void AndGate::draw(DrawingContext &context) const {
-    qDebug() << "DDDDD";
+    Component::draw(context);
+
     QPainter& painter = context.painter();
     painter.save();
     switch(orientation()) {

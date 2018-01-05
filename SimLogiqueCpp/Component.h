@@ -23,6 +23,7 @@ public:
     virtual void draw(DrawingContext& context) const override;
     virtual void move(int offX, int offY, int lastX, int lastY) override;
     virtual void update() = 0;
+    Orientation rotate();
 
 protected:
     Pin& createPin(int x, int y, Orientation orientation, std::string name);

@@ -34,19 +34,19 @@ inline Orientation operator--(Orientation& o, int) {
 
 class Pin : public Connector {
 public:
-    Pin(int x, int y, Orientation orientation, const std::string& name) : _x(x), _y(y), _orientation(orientation), _name(name) {}
-    bool value() { return _value || (_connection && _connection->value()); }
+    Pin(int x, int y, Orientation orientation, const std::string& name) : x(x), y(y), orientation(orientation), _name(name) {}
+    bool value() const { return _value || (_connection && _connection->value()); }
     void value(bool value) { _value = value; }
     void draw(DrawingContext& context);
     virtual void setConnection(Connection* connection) override;
 
+    int x;
+    int y;
+    Orientation orientation;
 private:
     friend class Connection;
     bool _value = false;
 
-    int _x;
-    int _y;
-    Orientation _orientation;
     std::string _name;
 };
 

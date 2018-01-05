@@ -17,6 +17,23 @@ void Component::draw(DrawingContext& context) const {
     }
 }
 
+Orientation Component::rotate() {
+    _orientation++;
+
+    int tmp = _width;
+    _width = _height;
+    _height = tmp;
+
+    for(int i = 0; i < _pins.size(); i++) {
+        Pin& pin = *(_pins[i]);
+        int y = _y + (pin.x - _x);
+        int x = _x + _width - (pin.y - _y);
+        pin.x = x;
+        pin.y = y;
+        pin.orientation++;
+    }
+}
+
 Pin& Component::createPin(int x, int y, Orientation orientation, std::string name) {
     Pin* pin = new Pin(x,y,orientation, name);
     _pins.push_back(pin);
